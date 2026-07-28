@@ -1,0 +1,121 @@
+.opening-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.opening-preloader__panel {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  /* Slight overlap (instead of two exact 50% halves) guarantees there is never
+     a sub-pixel gap at the centre seam, which is what made thin vertical
+     strokes in the graphic look "cut" as the panels rounded independently. */
+  width: calc(50% + 2px);
+  background: #001a33;
+  animation-duration: 1s;
+  animation-delay: 3.5s;
+  animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+  animation-fill-mode: forwards;
+}
+
+.opening-preloader__panel--left {
+  left: 0;
+  animation-name: opening-preloader-split-left;
+}
+
+.opening-preloader__panel--right {
+  right: 0;
+  animation-name: opening-preloader-split-right;
+}
+
+.opening-preloader__graphic-shell {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.opening-preloader__graphic-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 95vw;
+  max-width: 1600px;
+  padding: clamp(16px, 3vw, 40px);
+  border: 1px solid rgba(255, 120, 0, 0.28);
+  border-radius: 4px;
+  box-shadow:
+    0 0 0 1px rgba(255, 120, 0, 0.08),
+    0 0 32px rgba(255, 120, 0, 0.12);
+  animation: opening-preloader-graphic-exit 0.5s ease 3.5s forwards;
+}
+
+.opening-preloader__graphic-frame::before,
+.opening-preloader__graphic-frame::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  width: 24px;
+  border-top: 2px solid rgba(255, 120, 0, 0.65);
+  border-bottom: 2px solid rgba(255, 120, 0, 0.65);
+}
+
+.opening-preloader__graphic-frame::before {
+  left: -1px;
+  border-left: 2px solid rgba(255, 120, 0, 0.65);
+}
+
+.opening-preloader__graphic-frame::after {
+  right: -1px;
+  border-right: 2px solid rgba(255, 120, 0, 0.65);
+}
+
+.opening-preloader__graphic {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes opening-preloader-split-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes opening-preloader-split-right {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes opening-preloader-graphic-exit {
+  from {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opening-preloader {
+    display: none;
+  }
+
+  .opening-preloader__panel,
+  .opening-preloader__graphic-frame {
+    animation: none;
+  }
+}
