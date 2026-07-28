@@ -1,0 +1,56 @@
+:root {
+  /* Alternating section backgrounds: each landing section is a flat, discrete
+     color block (no gradient bleed) so the page reads as clearly separated
+     zones. --aic-navy-deep is the "anchor" navy used for Hero + closing CTA
+     sections; --aic-navy (lighter) is the secondary navy used mid-page. */
+  --aic-navy-deep: #001f3f;
+  --aic-void: #050a18;
+  --aic-navy: #0b2a4a;
+  --aic-blue: #0f5ea8;
+  --aic-tech-blue: #1d9bf0;
+  --aic-ink: #102033;
+  --aic-muted: #64748b;
+  --aic-mist: #eaf5ff;
+  --aic-line: #d8e3f0;
+  --aic-gold: #f6d99b;
+  --aic-gold-dark: #8b6f2f;
+  --aic-gold-darker: #6b5620;
+  --aic-warm: #fffaf0;
+  --aic-teal: #14b8a6;
+  --aic-teal-dark: #0f766e;
+  --type-body-size: 14px;
+  --type-body-line: 24px;
+  --type-card-size: 17px;
+  --type-card-line: 25px;
+  --type-section-size: 22px;
+  --type-section-line: 31px;
+  --type-major-size: 30px;
+  --type-major-line: 42px;
+  --type-hero-size: 36px;
+  --type-hero-line: 44px;
+  --landing-header-offset: 64px;
+  --shadow-soft: 0 20px 60px rgb(15 94 168 / 10%);
+  --shadow-card: 0 4px 12px rgb(11 42 74 / 6%);
+  --shadow-light: 0 2px 8px rgb(0 0 0 / 4%);
+  --shadow-pill-dark:
+    inset 0 0 0 1px rgb(255 255 255 / 14%), inset 1.5px 2.5px 0 -2px rgb(255 255 255 / 72%),
+    inset -2px -2px 0 -2px rgb(255 255 255 / 44%), 0 6px 16px rgb(0 0 0 / 10%);
+  /* Extra-soft, diffuse shadow for nested cards (Organization) and bento tiles (Research) */
+  --shadow-nested: 0 1px 2px rgb(11 42 74 / 4%), 0 24px 48px -16px rgb(11 42 74 / 12%);
+  --shadow-nested-hover: 0 1px 2px rgb(11 42 74 / 5%), 0 32px 64px -20px rgb(11 42 74 / 18%);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --type-body-line: 26px;
+    --type-card-size: 18px;
+    --type-card-line: 27px;
+    --type-section-size: 23px;
+    --type-section-line: 34px;
+    --type-major-size: 35px;
+    --type-major-line: 52px;
+    --type-hero-size: 56px;
+    --type-hero-line: 64px;
+    --landing-header-offset: 120px;
+  }
+}
