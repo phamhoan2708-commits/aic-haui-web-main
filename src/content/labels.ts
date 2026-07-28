@@ -7,6 +7,7 @@ export type AboutSectionLabels = {
   missionHeading: string;
   videoHeading: string;
   parentUnitHeading: string;
+  foundedDate: string;
 };
 
 export type ResearchSectionLabels = {
