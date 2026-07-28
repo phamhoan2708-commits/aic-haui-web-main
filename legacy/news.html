@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Tin tức & Hoạt động | AIC Blog</title>
+    <link rel="icon" type="image/jpeg" href="logoaic.jpg">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                  "on-surface": "#1c1b1b",
+                  "tertiary-fixed-dim": "#c2c7ca",
+                  "on-primary-container": "#9cbcd8",
+                  "secondary-container": "#61d0ff",
+                  "outline-variant": "#c2c7cd",
+                  "on-primary": "#ffffff",
+                  "primary-container": "#2c4c64",
+                  "on-secondary": "#ffffff",
+                  "secondary": "#006685",
+                  "background": "#fcf9f8",
+                  "on-tertiary-container": "#b4b9bc",
+                  "surface-container-low": "#f6f3f2",
+                  "on-secondary-fixed-variant": "#004d65",
+                  "inverse-on-surface": "#f3f0ef",
+                  "surface-dim": "#dcd9d9",
+                  "on-error": "#ffffff",
+                  "inverse-surface": "#313030",
+                  "error-container": "#ffdad6",
+                  "on-background": "#1c1b1b",
+                  "tertiary-fixed": "#dee3e6",
+                  "on-error-container": "#93000a",
+                  "tertiary-container": "#444a4c",
+                  "on-secondary-container": "#005872",
+                  "surface-tint": "#42627b",
+                  "primary-fixed-dim": "#aacae7",
+                  "outline": "#73787d",
+                  "primary-fixed": "#cbe6ff",
+                  "on-tertiary-fixed": "#171c1f",
+                  "tertiary": "#2e3336",
+                  "on-primary-fixed": "#001e30",
+                  "surface": "#fcf9f8",
+                  "on-tertiary": "#ffffff",
+                  "surface-container": "#f0eded",
+                  "error": "#ba1a1a",
+                  "surface-container-lowest": "#ffffff",
+                  "secondary-fixed": "#bfe9ff",
+                  "on-tertiary-fixed-variant": "#42484a",
+                  "surface-variant": "#e5e2e1",
+                  "inverse-primary": "#aacae7",
+                  "surface-container-high": "#eae7e7",
+                  "on-secondary-fixed": "#001f2a",
+                  "on-surface-variant": "#42474d",
+                  "secondary-fixed-dim": "#6bd2ff",
+                  "surface-container-highest": "#e5e2e1",
+                  "primary": "#12354c",
+                  "surface-bright": "#fcf9f8",
+                  "on-primary-fixed-variant": "#2a4a62"
+              },
+              fontFamily: {
+                  "body-lg": ["Be Vietnam Pro"],
+                  "headline-md": ["Space Grotesk"],
+                  "body-md": ["Be Vietnam Pro"],
+                  "display": ["Space Grotesk"],
+                  "headline-lg": ["Space Grotesk"],
+                  "label-sm": ["Be Vietnam Pro"]
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
+        <div class="flex items-center space-x-4 md:space-x-8">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="logoaic.jpg" alt="AIC Logo" class="w-10 h-10 rounded-lg shadow-sm">
+                <span class="text-xl font-bold tracking-tight text-slate-800 font-headline-md">AIC</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-slate-500 font-label-sm hover:text-secondary transition-colors duration-200">Trang chủ</a>
+                <a href="news.html" class="text-slate-900 border-b-2 border-secondary pb-1 font-semibold font-label-sm">Tin tức</a>
+                <a href="student-lab.html" class="text-slate-500 font-label-sm hover:text-secondary transition-colors duration-200">Lab Sinh viên</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="student-lab.html" class="bg-primary text-on-primary px-4 md:px-6 py-2 rounded-lg font-label-sm active:scale-95 duration-100 whitespace-nowrap">Đăng ký</a>
+            <button id="mobile-menu-btn" class="md:hidden text-on-surface">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+        <div class="flex flex-col px-4 py-2 space-y-2">
+            <a href="index.html" class="text-slate-600 py-2">Trang chủ</a>
+            <a href="news.html" class="text-primary font-semibold py-2">Tin tức</a>
+            <a href="student-lab.html" class="text-slate-600 py-2">Lab Sinh viên</a>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-24 pb-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-display font-bold text-primary mb-4">Tin tức & Hoạt động</h1>
+            <p class="text-lg text-on-surface-variant max-w-2xl mx-auto">Cập nhật những hoạt động nghiên cứu, hội thảo chuyên đề và câu chuyện từ cộng đồng sinh viên AIC.</p>
+        </div>
+
+        <!-- News Grid -->
+        <section class="mb-20">
+            <h2 class="text-2xl font-headline-lg font-bold text-primary mb-8 border-b pb-4">Bài viết nổi bật</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Bài 1 -->
+                <article class="bg-white rounded-2xl border border-surface-variant overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-xs font-bold">AIC</span>
+                            <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-xs font-bold">HaUI</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-headline-md mb-3 text-primary line-clamp-2">Trung tâm Nghiên cứu và Ứng dụng Trí tuệ nhân tạo (AIC)</h3>
+                        <p class="text-on-surface-variant mb-6 flex-1">Đơn vị định hướng các hoạt động nghiên cứu và ứng dụng AI trong giáo dục, công nghiệp và môi trường đổi mới sáng tạo tại HaUI.</p>
+                        <a href="https://sict.haui.edu.vn/vn/html/trung-tam-nghien-cuu-va-ung-dung-tri-tue-nhan-tao" target="_blank" rel="noreferrer" class="inline-flex items-center text-secondary font-bold hover:text-primary transition-colors">
+                            Xem nguồn chính thức <span class="material-symbols-outlined ml-1 text-[18px]">arrow_forward</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Bài 2 -->
+                <article class="bg-white rounded-2xl border border-surface-variant overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-xs font-bold">Seminar</span>
+                            <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-xs font-bold">Industrial AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-headline-md mb-3 text-primary line-clamp-2">Hội thảo khoa học về trí tuệ nhân tạo và ứng dụng</h3>
+                        <p class="text-on-surface-variant mb-6 flex-1">Không gian kết nối tri thức giữa giảng viên, chuyên gia, nhà nghiên cứu và sinh viên quan tâm tới AI ứng dụng.</p>
+                        <a href="https://sict.haui.edu.vn/vn/tin-tuc/hoi-thao-khoa-hoc-tri-tue-nhan-tao-va-ung-dung-trong-cong-nghiep-ket-noi-tri-thuc-dinh-hinh-tuong-lai-cong-nghe/71719" target="_blank" rel="noreferrer" class="inline-flex items-center text-secondary font-bold hover:text-primary transition-colors">
+                            Xem nguồn chính thức <span class="material-symbols-outlined ml-1 text-[18px]">arrow_forward</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Bài 3 -->
+                <article class="bg-white rounded-2xl border border-surface-variant overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-xs font-bold">Fintech</span>
+                            <span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-xs font-bold">Research</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-headline-md mb-3 text-primary line-clamp-2">Seminar AI trong Fintech - hướng nghiên cứu liên ngành</h3>
+                        <p class="text-on-surface-variant mb-6 flex-1">Một ví dụ điển hình cho tinh thần nghiên cứu đa ngành của AIC, nơi AI gắn với các bài toán kinh tế và tài chính.</p>
+                        <a href="https://sict.haui.edu.vn/vn/tin-tuc/seminar-ai-trong-fintech-huong-nghien-cuu-lien-nganh-dinh-hinh-khong-gian-hoc-thuat-ket-noi-tri-tue-nhan-tao-va-kinh-te-tai-chinh/71583" target="_blank" rel="noreferrer" class="inline-flex items-center text-secondary font-bold hover:text-primary transition-colors">
+                            Xem nguồn chính thức <span class="material-symbols-outlined ml-1 text-[18px]">arrow_forward</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Thành tựu -->
+        <section>
+            <h2 class="text-2xl font-headline-lg font-bold text-primary mb-8 border-b pb-4">Thành tựu nổi bật</h2>
+            <div class="relative pl-4 md:pl-0">
+                <!-- Vertical Line -->
+                <div class="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px bg-outline-variant"></div>
+
+                <div class="space-y-12 relative">
+                    <!-- Item 1 -->
+                    <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12 relative">
+                        <div class="md:w-1/2 md:text-right pl-16 md:pl-0 w-full">
+                            <h3 class="text-xl font-bold font-headline-md text-primary">Công bố báo cáo quốc tế về NLP</h3>
+                            <p class="text-on-surface-variant mt-2">Nhóm sinh viên AI Core Lab có bài báo được chấp nhận tại hội nghị học thuật quốc tế về xử lý ngôn ngữ tự nhiên.</p>
+                        </div>
+                        <div class="absolute left-[28px] md:left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-secondary text-white font-bold flex items-center justify-center border-4 border-surface shadow-sm z-10 text-sm">
+                            2025
+                        </div>
+                        <div class="md:w-1/2"></div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-12 relative">
+                        <div class="md:w-1/2 text-left pl-16 md:pl-0 w-full">
+                            <h3 class="text-xl font-bold font-headline-md text-primary">Giải nhất cuộc thi AI Startup HaUI</h3>
+                            <p class="text-on-surface-variant mt-2">Dự án ứng dụng AI trong quản lý rủi ro tín dụng của nhóm AI App Lab giành giải cao nhất.</p>
+                        </div>
+                        <div class="absolute left-[28px] md:left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-secondary text-white font-bold flex items-center justify-center border-4 border-surface shadow-sm z-10 text-sm">
+                            2024
+                        </div>
+                        <div class="md:w-1/2"></div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12 relative">
+                        <div class="md:w-1/2 md:text-right pl-16 md:pl-0 w-full">
+                            <h3 class="text-xl font-bold font-headline-md text-primary">Chuỗi hội thảo AI trong kỷ nguyên số</h3>
+                            <p class="text-on-surface-variant mt-2">Chuỗi seminar thu hút đông đảo sinh viên tham gia học hỏi, đối thoại cùng chuyên gia và cộng đồng nghiên cứu.</p>
+                        </div>
+                        <div class="absolute left-[28px] md:left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-primary-container text-white font-bold flex items-center justify-center border-4 border-surface shadow-sm z-10 text-sm">
+                            <span class="material-symbols-outlined text-[24px]">star</span>
+                        </div>
+                        <div class="md:w-1/2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Chatbot Widget -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 pointer-events-none">
+    <section id="chat-popup" class="w-[min(400px,calc(100vw-2rem))] p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-2xl opacity-0 translate-y-4 scale-95 origin-bottom-right pointer-events-none transition-all duration-200 border border-slate-200">
+        <div class="flex flex-col h-[420px] max-h-[70vh]">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                <div>
+                    <strong class="font-headline-md text-slate-800">AIC Assistant</strong>
+                    <span id="chat-status" class="block text-xs text-slate-500 mt-1">Online</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="px-2 py-1 text-xs font-bold text-white bg-gradient-to-r from-secondary to-primary rounded-md">LLM</span>
+                    <button id="chat-close" class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">×</button>
+                </div>
+            </div>
+            <div class="py-3 border-b border-slate-100">
+                <p class="text-sm text-slate-600 mb-2">Xin chào! Tôi là trợ lý ảo của Trung tâm AIC. Bạn muốn tìm hiểu thông tin gì?</p>
+                <div class="flex flex-wrap gap-2">
+                    <button class="prompt-btn text-xs font-semibold px-3 py-1.5 rounded-full bg-blue-50 text-secondary border border-blue-100 hover:bg-blue-100 transition-colors">AIC là gì?</button>
+                    <button class="prompt-btn text-xs font-semibold px-3 py-1.5 rounded-full bg-blue-50 text-secondary border border-blue-100 hover:bg-blue-100 transition-colors">Cách đăng ký lab</button>
+                </div>
+            </div>
+            <div id="chat-messages" class="flex-1 flex flex-col gap-3 py-3 overflow-y-auto"></div>
+            <form id="chat-form" class="mt-2 flex gap-2">
+                <input type="text" id="chat-input" placeholder="Nhập câu hỏi..." class="flex-1 px-4 py-2 bg-slate-50 border border-slate-200 rounded-full text-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary">
+                <button type="submit" class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-primary/90 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">send</span>
+                </button>
+            </form>
+        </div>
+    </section>
+    
+    <button id="chat-fab" class="flex items-center gap-3 h-14 px-4 bg-gradient-to-r from-secondary to-primary text-white rounded-full shadow-lg pointer-events-auto hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 font-bold font-display text-sm">AI</span>
+        <span class="font-bold tracking-wide pr-2">AIC Bot</span>
+    </button>
+</div>
+
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200 w-full py-12">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div class="text-center md:text-left">
+            <span class="text-lg font-bold text-slate-800 font-headline-md block mb-1">AIC Blog & AI Assistant</span>
+            <p class="text-slate-500 font-body-md text-sm">© 2026 AIC - School of Information and Communications Technology, HaUI</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="index.html" class="text-slate-500 hover:text-secondary font-label-sm transition-all hover:underline">Trang chủ</a>
+            <a href="news.html" class="text-slate-500 hover:text-secondary font-label-sm transition-all hover:underline">Tin tức</a>
+            <a href="student-lab.html" class="text-slate-500 hover:text-secondary font-label-sm transition-all hover:underline">Lab Sinh viên</a>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
